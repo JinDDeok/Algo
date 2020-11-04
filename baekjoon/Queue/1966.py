@@ -2,10 +2,9 @@ from collections import deque
 answer = list()
 T = int(input())
 for t in range(T):
-    important = deque()
-    important_M = deque()
     N,M = map(int,input().split())
-    for _ in range(N): important_M.append(0)
+    important = deque()
+    important_M = deque([0] * N)
     important_M[M] = 1
     imp = input().split()
     for _ in range(N): important.append(int(imp[_]))
